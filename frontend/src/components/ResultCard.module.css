@@ -1,0 +1,229 @@
+/* ── Result Card ── */
+.resultCard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.isCollapsed {
+    opacity: 0.9;
+}
+
+.isCollapsed:hover {
+    opacity: 1;
+    border-color: var(--accent-light);
+}
+
+.resultHeader {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    transition: background 0.2s;
+}
+
+.resultHeader:hover {
+    background: var(--surface2);
+}
+
+.headerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.chevron {
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.successBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: var(--green);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    width: fit-content;
+    letter-spacing: 0.03em;
+}
+
+.resultFileName {
+    font-size: 0.85rem;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+}
+
+/* ── Timer ── */
+.timerWrapper {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.timerLabel,
+.timerDigits {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.timerLabel {
+    color: var(--text-muted);
+}
+
+.timerDigits {
+    font-variant-numeric: tabular-nums;
+}
+
+/* ── Result Body ── */
+.resultBody {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.sectionLabel {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.qrSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qrImage {
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    border: 2px solid var(--border);
+    padding: 4px;
+    background: #fff;
+    display: block;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+.codeSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.codeBox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    width: 100%;
+    max-width: 280px;
+}
+
+.code {
+    flex: 1;
+    font-family: 'Courier New', monospace;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    color: var(--accent-light);
+    text-align: center;
+}
+
+.copyBtn {
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.72rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.copyBtn:hover {
+    border-color: var(--accent);
+    color: var(--accent-light);
+}
+
+.copyBtn.copied {
+    border-color: var(--green);
+    color: var(--green);
+    background: rgba(34, 197, 94, 0.08);
+}
+
+.codeHint {
+    margin-top: 6px;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+/* ── Reset ── */
+.resetBtn {
+    margin: 0 20px 20px;
+    padding: 9px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.resetBtn:hover {
+    border-color: var(--accent-light);
+    color: var(--accent-light);
+    background: rgba(124, 58, 237, 0.06);
+}

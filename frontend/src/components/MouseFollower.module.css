@@ -1,0 +1,22 @@
+.torch {
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle at center,
+            rgba(124, 58, 237, 0.08) 0%,
+            rgba(168, 85, 247, 0.04) 40%,
+            transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    mix-blend-mode: screen;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .torch {
+        display: none;
+        /* Hide on mobile devices for better performance */
+    }
+}

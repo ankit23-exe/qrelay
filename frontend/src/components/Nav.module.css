@@ -1,0 +1,110 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg);
+    opacity: 0.98;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.headerInner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+    .headerInner {
+        padding: 0 12px;
+    }
+
+    .logoText {
+        font-size: 1.1rem;
+    }
+
+    .nav {
+        display: none !important;
+    }
+}
+
+/* ── Logo ── */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logoText {
+    font-size: 1.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+}
+
+/* ── Nav ── */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    border-radius: 7px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color 0.2s, background 0.2s;
+}
+
+.navLink:hover {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.navLink.active {
+    color: var(--text);
+    background: var(--surface2);
+    font-weight: 600;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.themeToggle {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.themeToggle:hover {
+    border-color: var(--accent);
+    color: var(--accent-light);
+    transform: scale(1.05);
+}

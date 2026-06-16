@@ -1,0 +1,111 @@
+/* ── Shell ── */
+.shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.sideGlowLeft,
+.sideGlowRight {
+  position: absolute;
+  top: -50px;
+  bottom: -50px;
+  width: 160px;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 75%);
+  filter: blur(5px);
+  border-radius: 50% / 10%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: var(--glow-opacity);
+}
+
+@media (max-width: 1024px) {
+
+  .sideGlowLeft,
+  .sideGlowRight {
+    display: none;
+  }
+}
+
+
+.sideGlowLeft {
+  left: -135px;
+}
+
+.sideGlowRight {
+  right: -135px;
+}
+
+/* ── Background orbs ── */
+.orb3 {
+  position: fixed;
+  top: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  animation: orbPulse 5s ease-in-out infinite;
+  filter: blur(60px);
+  opacity: var(--orb-opacity);
+}
+
+.orb1 {
+  position: fixed;
+  top: -200px;
+  left: -200px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  opacity: var(--orb-opacity);
+}
+
+.orb2 {
+  position: fixed;
+  bottom: -150px;
+  right: -150px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  opacity: var(--orb-opacity);
+}
+
+@keyframes orbPulse {
+
+  0%,
+  100% {
+    opacity: var(--orb-opacity);
+    transform: translateX(-50%) scale(1);
+  }
+
+  50% {
+    opacity: calc(var(--orb-opacity) * 0.5);
+    transform: translateX(-50%) scale(1.05);
+  }
+}
+
+
+/* ── Main ── */
+.main {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  padding: 0 24px 40px;
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 0 16px 32px;
+  }
+}

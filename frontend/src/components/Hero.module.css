@@ -1,0 +1,153 @@
+.hero {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 56px 24px 32px;
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 16px 24px;
+    }
+
+    .heroTitle {
+        font-size: 1.75rem;
+    }
+
+    .heroSub {
+        font-size: 0.9rem;
+    }
+}
+
+
+.heroBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+    margin-bottom: 18px;
+}
+
+.heroDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 6px var(--green);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+.heroTitle {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.heroAccent {
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.heroSub {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.mobileNav {
+    display: none;
+}
+
+@media (max-width: 480px) {
+
+    /* ── Nav ── */
+    .mobileNav {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 4px;
+        width: fit-content;
+        margin: 24px auto 0 auto;
+    }
+
+    .mobileLink {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 16px;
+        border-radius: 7px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--text-muted);
+        transition: color 0.2s, background 0.2s;
+    }
+
+    .mobileLink:hover {
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.04);
+    }
+
+    .mobileLink.active {
+        color: var(--text);
+        background: var(--surface2);
+        font-weight: 600;
+    }
+
+    /* .mobileNav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 24px;
+        background: var(--surface);
+        padding: 4px;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mobileLink {
+        padding: 8px 20px;
+        border-radius: 9px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        transition: all 0.2s;
+    }
+
+    .mobileLink.active {
+        background: var(--surface2);
+        color: var(--text);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    } */
+}
